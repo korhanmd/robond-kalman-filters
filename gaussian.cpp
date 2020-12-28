@@ -6,8 +6,7 @@ using namespace std;
 double f(double mu, double sigma2, double x)
 {
     //Use mu, sigma2 (sigma squared), and x to code the 1-dimensional Gaussian
-    //Put your code here
-    //double prob =
+    double prob = (1/(sqrt(2*sigma2*M_PI)))*exp(-pow(x-mu,2)/(2*sigma2));
     return prob;
 }
 
