@@ -8,7 +8,7 @@ double new_mean, new_var;
 
 tuple<double, double> state_prediction(double mean1, double var1, double mean2, double var2)
 {
-    new_mean = //TODO: Code the state prediction mean function mu;
+    new_mean = mean1 + mean2; //State prediction mean function mu;
     new_var =  //TODO: Code the state prediction variance function sigma square;
     return make_tuple(new_mean, new_var);
 }
