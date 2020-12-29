@@ -37,11 +37,12 @@ int main()
     //######TODO: Put your code here below this line######//
     
     // Loop through all the measurments
-        // Apply a measurment update
+    for (int i = 0; i < sizeof(measurements)/sizeof(measurements[0]); i++){
+        tie(mu, sig) = measurement_update(mu, sig, measurements[i], measurement_sig); // Measurment update
         printf("update:  [%f, %f]\n", mu, sig);
         // Apply a state prediction
         printf("predict: [%f, %f]\n", mu, sig);
-    
+    }
     
     return 0;
 }
