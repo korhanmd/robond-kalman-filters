@@ -18,6 +18,8 @@ tuple<MatrixXf, MatrixXf> kalman_filter(MatrixXf x, MatrixXf P, MatrixXf u, Matr
         // Code the Measurement Update
         // Initialize and Compute Z, y, S, K, x, and P
         
+        MatrixXf Z(1, 1);
+        Z << measurements[n];
         
         
         
