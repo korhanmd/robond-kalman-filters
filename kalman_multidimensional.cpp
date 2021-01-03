@@ -22,7 +22,7 @@ tuple<MatrixXf, MatrixXf> kalman_filter(MatrixXf x, MatrixXf P, MatrixXf u, Matr
         Z << measurements[n];
         
         MatrixXf y(1, 1);
-        
+        y << Z - (H*x);
         
         
         
