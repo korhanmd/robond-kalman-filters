@@ -15,8 +15,6 @@ tuple<MatrixXf, MatrixXf> kalman_filter(MatrixXf x, MatrixXf P, MatrixXf u, Matr
         //****** TODO: Kalman-filter function********//
         
         // Measurement Update
-        // Code the Measurement Update
-        // Initialize and Compute Z, y, S, K, x, and P
         
         MatrixXf Z(1, 1);
         Z << measurements[n];
@@ -31,6 +29,7 @@ tuple<MatrixXf, MatrixXf> kalman_filter(MatrixXf x, MatrixXf P, MatrixXf u, Matr
         K << P * H.transpose() * S.inverse();
 
         x << x + K*y;
+        P << (I - K*H)*P;
         
         // Prediction
         // Code the Prediction
