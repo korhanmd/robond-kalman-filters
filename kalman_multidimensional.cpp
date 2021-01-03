@@ -35,7 +35,7 @@ tuple<MatrixXf, MatrixXf> kalman_filter(MatrixXf x, MatrixXf P, MatrixXf u, Matr
         // Code the Prediction
         // Compute x and P
 
-
+        x << F*x + u;
 
         
         
